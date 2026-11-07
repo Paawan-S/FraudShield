@@ -1,0 +1,25 @@
+{
+  "model": "XGBClassifier",
+  "features": [
+    "log_amount",
+    "hour",
+    "is_transfer"
+  ],
+  "params": {
+    "max_depth": 4,
+    "learning_rate": 0.1,
+    "n_estimators": 300,
+    "min_child_weight": 1,
+    "subsample": 0.8,
+    "random_state": 42
+  },
+  "trained_on": "train split only (steps 1-504), TRANSFER and CASH_OUT only",
+  "validation": {
+    "roc_auc": 0.8782,
+    "pr_auc_raw": 0.411,
+    "pr_auc_baseline": 0.0147,
+    "pr_auc_adj": 0.2464,
+    "recall@0.1%FPR": 0.2555,
+    "recall@1%FPR": 0.4367
+  }
+}
